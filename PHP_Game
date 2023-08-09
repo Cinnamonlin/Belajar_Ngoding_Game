@@ -1,0 +1,28 @@
+<?php
+// Menampilkan pesan selamat datang
+echo "Welcome To My game\n";
+
+// Menampilkan judul permainan
+echo " ===== Game Tebak Angka =====\n";
+
+// Memberikan instruksi untuk menebak angka antara 1 dan 9
+echo "Tebak sebuah angka antara 1 dan 9!\n";
+
+// Menghasilkan angka acak antara 1 dan 9 yang akan ditebak
+$computer = rand(1, 9);
+
+// Meminta pengguna untuk memasukkan tebakan
+echo "Masukan Tebakanmu : ";
+
+// Membaca input dari pengguna melalui console (STDIN)
+$player = trim(fgets(STDIN));
+
+// Membandingkan tebakan pengguna dengan angka komputer
+if ($player == $computer) {
+    // Jika tebakan benar, menampilkan pesan kemenangan
+    echo "Menang. Angka komputer adalah $computer.\n";
+} else {
+    // Jika tebakan salah, menampilkan pesan kekalahan
+    echo "Kalah. Angka komputer adalah $computer.\n";
+}
+?>
